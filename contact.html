@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contact-container animate__animated animate__fadeIn">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="section-header text-center mb-5">
+                <h1 class="display-4 mb-3">Contact Us</h1>
+                <p class="lead text-muted">We're here to help and answer any questions you might have</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="contact-info card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title h4 mb-4">
+                                <i class="fas fa-info-circle text-primary"></i> Get in Touch
+                            </h2>
+                            <ul class="contact-list list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                    <strong>Address:</strong><br>
+                                    123 Health Street<br>
+                                    Medical District<br>
+                                    New York, NY 10001
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-phone text-primary me-2"></i>
+                                    <strong>Phone:</strong><br>
+                                    +1 (555) 123-4567
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-envelope text-primary me-2"></i>
+                                    <strong>Email:</strong><br>
+                                    support@medbox.com
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock text-primary me-2"></i>
+                                    <strong>Hours:</strong><br>
+                                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                    Saturday: 10:00 AM - 4:00 PM<br>
+                                    Sunday: Closed
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contact-form card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title h4 mb-4">
+                                <i class="fas fa-paper-plane text-primary"></i> Send Message
+                            </h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-section mt-5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title h4 mb-4">Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.contact-list li {
+    padding-left: 2rem;
+    position: relative;
+}
+
+.contact-list i {
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.contact-info,
+.contact-form {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.contact-info:hover,
+.contact-form:hover {
+    transform: translateY(-5px);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    padding: 0.6rem 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+</style>
+{% endblock %}
